@@ -3,8 +3,8 @@ int main(){
     int num , result;
     printf("Enter number : ");
     scanf("%d" ,&num);
-    if(num % 2 == 0 || num % 3 == 0){
-        while(num % 2 == 0 || num % 3 == 0){
+    if((num % 2 == 0 || num % 3 == 0) && num != 0){
+        while((num % 2 == 0 || num % 3 == 0) && num != 0){
             if(num % 2 == 0){
                 num /= 2;
                 printf("2 ");
@@ -17,15 +17,17 @@ int main(){
                 break;
             }
         }
-        if(num != 1){{
+        if(num  != 1){{
             printf("%d ",num);
         }}
     }
-    else if(num == 1){
+    else if(num < 2){
         printf(":(");
     }
+
     else{
-        printf("%d",num);
+        printf("%d ",num);
     }
+    printf("\n");
     return 0;
 }
