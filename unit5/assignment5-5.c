@@ -1,7 +1,8 @@
 #include <stdio.h>
 int main(){
     int num,count,result = 1;
-    printf("Enter 'number' and 'count' : ");
+    printf(" *** Power ***\n");
+    printf("Enter 2 Positive Integers: ");
     scanf("%d %d",&num,&count);
     if(count <= 0 ){
         printf("I can move on");
