@@ -15,7 +15,6 @@ int main(){
             if(GCD < j){
                 GCD = j;
             }
-            
         }
     }
     while (1) {
