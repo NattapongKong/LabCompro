@@ -1,3 +1,4 @@
+//รับ expression ใด ๆ จากผู้ใช้งาน แล้วนับจำนวนวงเล็บ ว่ามีกี่วงเล็บ
 #include <stdio.h>
 #include <string.h>
 int main(){
@@ -6,7 +7,8 @@ int main(){
     printf(" *** Count number of brackets *** \n");
     printf("Enter expression : ");
     fgets(str,50,stdin);
-    for(int i = 0;i < strlen(str) - 1; i++){
+    str[strlen(str)-1] = '\0';
+    for(int i = 0;i < strlen(str) ; i++){
         if(str[i] == '('){
             unpairedBrac++;
         }
@@ -19,8 +21,8 @@ int main(){
         }
 
     }
-    printf("expression : %s",str);
-    printf("length : %ld\n",strlen(str) - 1);
+    printf("expression : %s\n",str);
+    printf("length : %ld\n",strlen(str));
     if(unpairedBrac == 0 && pairedBrac > 0){
         if(pairedBrac > 1){
             printf("There are %d brackets in %s",pairedBrac, str);
@@ -33,8 +35,7 @@ int main(){
         printf("There is NO bracket in %s",str);
     }
     else if(unpairedBrac > 0){
-        printf("%s",str);
-        printf(" ===> bracket doesn't match.");
+        printf("%s ===> bracket doesn't match.",str);
     }
     return 0;
 }
