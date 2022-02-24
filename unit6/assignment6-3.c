@@ -1,5 +1,6 @@
 //finding prime numbers program in specific range
 #include <stdio.h>
+#include <stdlib.h>
 int main(){
     int start,finish,range[2],total = 0;
     
@@ -20,11 +21,13 @@ int main(){
                 break;
             } 
             else if(j == i-1){
-                printf(" %d",i);
+          //      printf(" %d",i);
                 total++;
             }
+            
         }
     }
     printf("\ntotal prime numbers : %d\n",total);
+    
     return 0;
 }
