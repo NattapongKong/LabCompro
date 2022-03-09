@@ -33,7 +33,7 @@ int main()
 
 int char_to_int(char num[])
 {
-    int res = 0;
+    int res = 0; 
     for (int i = 0; num[i] != '\0'; ++i)
         res = (res * 10)  + (num[i] - '0');
     return res;    
