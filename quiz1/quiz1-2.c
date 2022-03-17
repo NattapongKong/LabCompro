@@ -6,11 +6,10 @@
 #include <stdio.h>
 #define size 3
 int main(){
-    int input[size];
+    float input[size];
     printf("input  : ");
-    scanf("%d %d %d",&input[0],&input[1],&input[2]);
+    scanf("%f %f %f",&input[0],&input[1],&input[2]);
     printf("Square :");
-    printf("%7.3f%7.3f%7.3f",input[0]*input[0]*1.00,input[1]*input[1]*1.00,input[2]*input[2]*1.00);
+    printf(" %6.3f %6.3f %-6.3f",input[0]*input[0],input[1]*input[1],input[2]*input[2]);
     return 0;
 }
-//ยังไม่ได้
